@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>My Profile</h1>
+        <p><strong>Full Name:</strong> {{ user.profile.full_name }}</p>
+        <p><strong>Gender:</strong> {{ user.profile.gender }}</p>
+        <p><strong>Height:</strong> {{ user.profile.height }} cm</p>
+        <p><strong>Weight:</strong> {{ user.profile.weight }} kg</p>
+        <p><strong>BMI:</strong> {{ user.profile.bmi }}</p>
+        <p><a href="{% url 'edit_profile' %}">Edit Profile</a></p>
+    </div>
+{% endblock %}
